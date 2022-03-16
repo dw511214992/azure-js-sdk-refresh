@@ -1,0 +1,24 @@
+{
+  "name": "azure-js-sdk-refresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "refresh-all": "./dist/refreshAll.js",
+    "refresh": "./dist/refreshOnePackage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "shelljs": "^0.8.5",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}
