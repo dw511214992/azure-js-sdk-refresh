@@ -16,5 +16,5 @@ The tool commits each package with commit message "refresh {package name}".
 # Refresh one package
 ```shellhh
 cd azure-sdk-for-js
-refresh-all --swagger-repo=../azure-rest-api-specs --use=@autorest/typescript@6.0.0-alpha.16.20220105.1 --package-path=sdk/compute/arm-compute
+refresh --swagger-repo=../azure-rest-api-specs --use=@autorest/typescript@6.0.0-alpha.16.20220105.1 --package-path=sdk/compute/arm-compute
 ```
