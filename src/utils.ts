@@ -16,7 +16,7 @@ export function generateCodes(options: any, readme: string) {
         command += ` --use=${options.use}`;
     }
     if (options['additional-args']) {
-        command += ` --additional-args=${options['additional-args']}`;
+        command += ` --additional-args="${options['additional-args']}"`;
     }
     if (options['tag']) {
         command += ` --tag=${options['tag']}`;

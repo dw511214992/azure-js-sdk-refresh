@@ -26,6 +26,15 @@ async function main(options: any) {
     if (!commitId) {
         throw new Error(`cannot find commit in ${path.join(options['package-path'], '_meta.json')}`);
     }
+    const autorestCommand = meta['autorest_command'];
+    if (!!autorestCommand && autorestCommand.includes('--generate-sample=true')) {
+        if (!options['additional-args']) {
+            options['additional-args'] = ` --generate-sample=true`;
+        } else if (!options['additional-args'].includes('--generate-sample=true')) {
+            options['additional-args'] = `" ${options['additional-args']} --generate-sample=true"`;
+        }
+    }
+
     checkOutSwaggerRepo(options['swagger-repo'], commitId);
     generateCodes(options, readme);
 
